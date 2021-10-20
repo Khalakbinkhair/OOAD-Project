@@ -1,0 +1,28 @@
+1) create table occasion (occasion_code number(20) primary key,occasion_name varchar2(20) not null) 
+
+2) create table product(product_code number(20)primary key,unit_price number(20) not null)
+
+3) create table description (pid number(20)primary key,description varchar2(20),product_name varchar2(20))
+
+4) create table PCID (pcid number(20)primary key,product_code number(20)not null,order_number number(20) unique)
+
+5) create table Order_1 (order_number number(20)primary key,order_name varchar2(20),customer_id number(20) unique)
+
+6) create table address (sid number(20)primary key,street_name varchar2(20),city varchar2(20))
+
+7) create table customer (customer_id number(20)primary key,mobile_number number(20) unique,name varchar2(20),address varchar2(20),house_no number(20),payment number(20) not null,cash number(20),credit_card number(20),sid number(20)unique)
+
+8) create table order_2 (order_number number(20)primary key,order_date date,customer_id number(20)unique)
+
+9) create table SCID (scid number(20)primary key,customer_id number(20)unique,salesman_id number(20) unique)
+
+10) create table salesman (salesman_id number(20)primary key,name varchar2(20),mobile_number number(20)unique,salary varchar2(20)not null,shopsupervisor_id number(20)unique )
+
+11) create table shopsupervisor (shopsupervisor_id number(20)primary key,name varchar2(20),mobile_number number(20)unique, salary number(20)not null)
+
+12) create table owner (owner_id number(20)primary key,name varchar2(20),mobile_number number(20)unique,address varchar2(20),house_no number(20),sid number(20)unique)
+
+
+
+desc order
+
